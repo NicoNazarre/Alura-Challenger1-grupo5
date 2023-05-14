@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="estilos/style-reset.css">
+    <link rel="stylesheet" href="estilos/style-estilos.css">   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header class="header">    
+        <img class="logo" src="images/Logo.png" alt="Logo Alura">
+    </header>
+    <main class="main">
+
+        <section class="main__block1">
+          <textarea class="text-area" placeholder="Ingrese su texto aqui" id="textarea"></textarea>
+          <article class="block1__aviso">
+            <img src="images/Vector.png"/>
+            <p>Solo letras minúsculas y sin acentos</p>
+          </article>
+    
+          <div class="container-buttons">
+            <button class="button button--secondary b2" onclick="handleClick('decrypt')">Desencriptar</button>
+            <button class="button b1" onclick="handleClick('encrypt')">Encriptar</button>
+          </div>
+        </section>
+
+        <section class="main__block2">
+          <div class="container-textarea">
+            <article class="warning" id="warningSection">
+              <img src="images/Muñeco.png" alt="muñeco">
+              <p>Ningún mensaje fue encontrado</p>
+              <span>Ingresa el texto de desees encriptar o desencriptar.</span>
+            </article>
+            <div class="resultados novisible" id="resultsSection">
+              <textarea id="mensaje"></textarea>
+              <button class="button" onclick="copyText()" id="copyButton">Copiar</button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <script src="script.js" defer></script>
+</body>
+</html>
