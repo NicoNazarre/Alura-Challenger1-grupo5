@@ -9,13 +9,11 @@ const DICTIONARY = {
   o: 'ober',
   a: 'ai',
   u: 'ufat'
-  
 }
 
 // ESCUCHAR EL EVENTO DE CLICK
 const handleClick = (type) => {
   const inputValue = input.value
-/*   textarea.value = ""; */
 
   const newText = encryptDecrypt(inputValue, type)
   showResults(newText)
@@ -33,17 +31,6 @@ const encryptDecrypt = (text, type) => {
   }
   return text
 }
-
-/* function encriptar(stringEncriptada) {
-  let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
-  stringEncriptada = stringEncriptada.toLowerCase()
-
-  for(let i = 0; i < matrizCodigo.length; i++) {
-    if(stringEncriptada.includes(matrizCodigo[i][0])){
-      stringEncriptada = stringEncriptada.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1])
-    }
-  }
-} */
 
 // MOSTRAR RESULTADOS, ALTERNAR ENTRE LAS SECCIONES
 const showResults = (text) => {
